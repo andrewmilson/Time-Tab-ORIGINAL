@@ -1,0 +1,88 @@
+@page{
+	margin: 15px;
+	margin-left: 0px;
+	margin-top: 4px;
+	padding: 0;
+	font-family: Arial;
+
+	@bottom-center {
+		content: "{{ app_url }} | {{ report_date }} | " counter(page) " of " counter(pages);
+		font-size: 12px;
+		padding-bottom: 10px;
+		font-weight: bold;
+		font-family: Arial;
+	}
+}
+
+ul{
+	margin: 15px 0 0 15px;
+	list-style-type: none;
+	font-family: Arial;
+	font-size: 12px;
+	padding: 0;
+	color: #222;
+}
+
+ul.root_activities{
+	margin: 0;
+}
+
+.group_name{
+	background: #ddd;
+	padding: 8px 5px 8px 5px;
+	font-weight: bold;
+	border: 1px solid #ccc;
+}
+
+.bold_record{
+	font-style: italic;
+	color: #333;
+}
+
+table{
+	margin: 8px 0 8px 0;
+	vertical-align:bottom;
+}
+
+table td{
+	vertical-align:top;
+	padding: 5px;
+}
+
+table td.record_date{
+	width: 145px;
+}
+
+table td.record_time{
+	width: {% if time_format == "24" %}130px{% else %}170px{% endif %};
+}
+
+.activity_name{
+	background: #ccc;
+	padding: 8px 5px 8px 5px;
+	font-weight: bold;
+	border: 1px solid #bbb;
+}
+
+.activity_total{
+	float: right;
+	color: #777;
+}
+
+.activity_total_income_amount{
+	border-right: solid 3px #aaa;
+	padding-right: 5px;
+	margin-right: 5px;
+}
+
+.report_meta{
+	font-family: 'Lucida Grande';
+	font-size: 20px;
+	margin: 15px 0 20px 15px;
+	padding: 0;
+	background: none;
+}
+
+.report_meta li.line{
+	margin: 10px 0 0 0;
+}

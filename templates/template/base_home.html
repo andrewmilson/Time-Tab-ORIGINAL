@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link href="/static/images/general/favicon.png" rel="shortcut icon"/>
+		<link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="/static/css/home.css" rel="stylesheet" type="text/css"/>
+		<title>{% block title %}{% endblock title %} &#183; Time Tab</title>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-42290053-1', 'mytimetab.com');
+		  ga('send', 'pageview');
+		</script>
+
+		{% block head %}
+		{% endblock head %}
+	</head>
+
+	<body>
+		<div class="wrapper">
+			{% if request.GET.state %}
+				<div class="state">{{ request.GET.state }}</div>
+			{% endif %}
+			<header>
+				<a href="/"><img style="margin: 15px 0 0 0;" src="/static/images/general/logo.png"/></a>
+				<div class="call_to_action">
+					<a href="/account/login/" class="login">Login</a>
+					<a href="/account/signup/" class="signup">Signup for Free</a>
+				</div>
+				<div class="nav">
+					<div class="nav_container">
+						<ul class="tools_nav">
+							<li><a href="/home/" class="{% if request.path == '/home/' %}current {% endif %}home_navitem">Home</a></li>
+							<li><a href="/account/signup/" class="signup_navitem">Signup</a></li>
+							<li><a href="/about/" class="{% if request.path == '/about/' %}current {% endif %}about_navitem">About</a></li>
+							<li><a href="#contact" class="contact_navitem">Contact</a></li>
+						</ul><!-- end .tools_nav -->
+					</div><!-- end .nav_container -->
+				</div><!-- end .nav -->
+				<span class="ranometre"></span>
+			</header><!-- end header -->
+	
+			<div class="main">
+				<div class="random_thing"></div>
+				{% block main %}{% endblock main %}
+			</div>
+
+			{% block extra %}
+					
+			{% endblock extra %}
+			
+			<div class="footer">
+				<a class="hosting_provider" href="http://rimuhosting.com/?r=59924947284723849911101399202504720656" target="blank"><img src="/static/images/general/rimuhosting_large.png" alt="powered by Rimu"/></a>
+				<ul class="links">
+					<li><h3>Links</h3></li>
+					<li><a href="/home/"><img src="/static/images/icons/house.gif" alt="Home"/>Home</a></li>
+					<li><a href="/account/signup/"><img src="/static/images/icons/signup.gif" alt="Signup"/>Signup</a></li>
+					<li><a href="/about/"><img src="/static/images/icons/info.gif" alt="About"/>About</a></li>
+					<hr />
+					<li><a href="/slider/"><img src="/static/images/icons/slider.gif" alt="Slider"/>Slider</a></li>
+					<li><a href="/report/"><img src="/static/images/icons/graph_white.gif" alt="Report"/>Report</a></li>
+				</ul>
+				<ul>
+					<li><h3 id="contact">contact</h3></li>
+					<li>
+						<form action="/home/post/" method="post">
+							<input type="hidden" value="contact" name="send_method"/>
+							<input type="hidden" value="{{ request.path }}" name="next"/>
+							<input type="hidden" value="{{ csrf_token }}" name="csrfmiddlewaretoken"/>
+							<input type="text" placeholder="Name" class="name" name="name"/>
+							<input type="email" placeholder="Email" class="email" name="email"/>
+							<input type="text" placeholder="Subject" class="subject" name="subject"/>
+							<textarea placeholder="Message" name="message"></textarea>
+							<input type="submit" value="Contact">
+						</form>
+					</li>
+				</ul>
+				<ul class="social">
+					<li><h3>Connect</h3></li>
+					<li><a href="http://www.facebook.com/pages/Time-Tab/178337542336248" target="blank" p><img src="/static/images/sn/facebook.gif" alt="Facebook"/>Facebook</a></li>
+					<li><a href="http://twitter.com/mytimetab" target="blank"><img src="/static/images/sn/twitter.gif" alt="Twitter"/>Twitter</a></li>
+					<li><a href="http://plus.google.com/b/103787373545401683793/103787373545401683793/about/p/pub" target="blank"><img src="/static/images/sn/googleplus.gif" alt="Google+"/>Google+</a></li>
+				</ul>
+				<div class="copyright clear">Copyright &copy; Andrew Milson <script>document.write(new Date().getFullYear())</script> <a href="/terms/">Terms of service</a> / <a href="/privacy/">Privacy Policy</a>. <a href="http://rimuhosting.com/vps-servers?r=59924947284723849911101399202504720656" target="blank">This Site is Hosted on a RimuHosting VPS</a>.</div>
+			</div>
+		</div>
+	</body>
+</html>

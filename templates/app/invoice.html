@@ -1,0 +1,63 @@
+{% extends "template/base.html" %}
+
+{% block title %}Invoice{% endblock title %}
+
+{% block head %}
+	<link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/static/css/datepicker.css" rel="stylesheet" type="text/css"/>
+	<link href="/static/css/report.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="/static/js/require.js" data-main="/static/js/invoice.js"></script>
+{% endblock head %}
+
+{% block main %}
+	<div class="secondary_container">
+		<ul class="tools_sub_nav">
+			<li class="date_container"><span class="sub_nav_item"></span>
+				<div class="date_container from">
+					<a class="date_pick" href="#">From</a>
+					<span class="date_day">loading</span>
+					<div class="the_datepicker from"></div>
+				</div>
+
+				<div class="date_container to">
+					<a class="date_pick" href="#">To</a>
+					<span class="date_day">loading</span>
+					<div class="the_datepicker to"></div>
+				</div>
+			</li>
+			<li><span class="sub_nav_item">Report From</span>
+				<select class="activity_select">
+				</select>
+			</li>
+			<li>
+				<a href="#" class="generate_report">generate invoice</a>
+			</li>
+		</ul><!-- end .tools_sub_nav -->
+
+		<div class="prime_invoice_container">
+			<table class="invoice_main">
+				<tr>td*</tr>
+			</table>
+		</div><!-- end .prime_invoice_container -->
+	</div><!-- end .secondary_container -->
+{% endblock main %}
+
+{% block extra %}
+<div class="load_data">processing</div>
+	<div class="cus_alert">
+		<div class="download_report_ui alert_inner">
+			<ul>
+				<li>							
+					<span>Download</span>
+				</li>
+				<li>
+					<div class="download_report_buttons">
+						<a href="#" class="pdf" style="border-color: #ad3434; background: #ad3434;">PDF</a>
+						<a href="#" class="csv" style="border-color: #e59900; background: #ffae00;">CSV</a>
+						<a href="#" class="xcell" style="border-color: #1d663e; background: #1E7044;">Excell</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div><!-- end .cus_alert -->
+{% endblock extra %}

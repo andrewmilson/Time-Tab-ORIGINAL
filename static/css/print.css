@@ -1,0 +1,17 @@
+header, .time_container, .tools_sub_nav, .main_nav, .root_activities, .activity_crumbs, .delete_group{
+	display: none;
+}
+
+.wrapper{
+	border: none;
+}
+
+.box_color:before{
+	content: "|||";
+	color: #900;
+}
+
+*{
+	text-shadow: none;
+	color: #000;
+}

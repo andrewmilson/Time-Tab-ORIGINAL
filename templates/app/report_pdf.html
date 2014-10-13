@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Hallo</title>
+	</head>
+	
+	<body>
+		{% if meta %}
+			<ul class="report_meta">
+				{% for met in meta %}
+					<li class="line">{{ met }}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+
+		{% autoescape off %}
+			{{ report_content }}
+		{% endautoescape %}
+	</body>
+</html>

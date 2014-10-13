@@ -1,0 +1,106 @@
+{% extends "template/base.html" %}
+
+{% block title %}Report{% endblock title %}
+
+{% block head %}
+		<link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="/static/css/datepicker.css" rel="stylesheet" type="text/css"/>
+		<link href="/static/css/report.css" rel="stylesheet" type="text/css"/>
+		<link href="/static/css/report_print.css" rel="stylesheet" type="text/css" media="print"/>
+		<script type="text/javascript" src="/static/js/require.js" data-main="/static/js/report.js"></script>
+{% endblock head %}
+
+{% block main %}
+	<div class="secondary_container">
+		<ul class="tools_sub_nav">
+			<li class="date_container"><span class="sub_nav_item"></span>
+				<div class="date_container from">
+					<a class="date_pick" href="#">From</a>
+					<span class="date_day">loading</span>
+					<div class="the_datepicker from"></div>
+				</div>
+
+				<div class="date_container to">
+					<a class="date_pick" href="#">To</a>
+					<span class="date_day">loading</span>
+					<div class="the_datepicker to"></div>
+				</div>
+			</li>
+			<li><span class="sub_nav_item">Report From</span>
+				<select class="activity_select">
+				</select>
+			</li>
+			<li>
+				<a href="#" class="generate_report">generate report</a>
+			</li>
+		</ul><!-- end .tools_sub_nav -->
+
+		<center style="margin: 10px 0 0 0;">
+			<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle"
+	    	 style="display:inline-block;width:728px;height:90px"
+		     data-ad-client="ca-pub-7847198113999424"
+	    	 data-ad-slot="6877233398"></ins>
+			<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+		</center>
+
+		<div class="prime_report_container">
+			<div class="please_generate_report"><div class="arrow_container"><span class="arrow_shaft"></span><span class="arrow_head"></span></div><span class="generate_text">Fill out and generate</span></div>
+			
+			<div class="report_sect">
+				<div class="report_canvas_info_container report_item">
+					<ul class="report_controlls">
+						<li class="controlls_name">Report Info</li>
+					</ul>							
+					<div id="report_canvas_info"></div>
+				</div>
+
+				<div class="report_preview_container report_item">
+					<ul class="report_controlls">
+						<li><a href="#" class="download_btn action_button" data-download-type="pdf">PDF</a></li>
+						<li><a href="#" class="download_btn action_button" data-download-type="csv">CSV</a></li>
+						<li><a href="#" class="print action_button">Print</a></li>
+						<li class="li_right report_settings_cont"><a href="#" class="report_settings_button dropdown_button" onclick="return false">Settings</a>
+							<div class="report_settings">
+								<div class="report_nav">Report Settings <div class="arrow"></div></div>
+								<p>
+									<label class="hide_empty_container">Round Records</label>
+									<select class="rounding_type">
+										<option id="none">To nothing</option>
+										<option id="nearest" selected="selected">To nearest</option>
+										<option id="up">Up to nearest</option>
+										<option id="down">Down to nearest</option>
+									</select>
+									<select class="rounding_amount">
+										<option>5</option>
+										<option>6</option>
+										<option>10</option>
+										<option selected="selected">15</option>
+										<option>20</option>
+										<option>30</option>
+									</select>
+									<span class="mins_text">mins</span>
+								</p>
+								<p>
+									<label class="hide_empty_container">Hide empty activities and groups<input type="checkbox" checked class="hide_empty"></label>
+								</p>
+							</div>
+						</li>
+					</ul><!-- end .report_controlls -->
+					<div class="report_preview_scroll">
+						<div id="report_canvas_preview"></div>
+						<div id="report_canvas_invisible"></div>
+					</div>
+					<div class="resize_report_view"></div>
+				</div><!-- end .report_preview_container -->
+			</div><!-- end .report_sect -->
+		</div><!-- end .prime_report_container -->
+		
+		<div class="status">	
+		</div><!-- end status -->
+	</div><!-- end .secondary_container -->
+{% endblock main %}
+
+{% block extra %}
+	<div class="load_data">processing</div>
+{% endblock extra %}

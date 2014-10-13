@@ -1,0 +1,61 @@
+{% extends "template/base_home.html" %}
+
+{% block title %}Sign Up{% endblock title %}
+
+{% block main %}
+	<div class="main">
+		<div class="random_thing"></div>
+		<table class="plans" cellpadding="10">
+			<tr class="top">
+				<td></td>
+				<td class="plan">$3<span>per month</span></td>
+			</tr>
+			<tr>
+				<td>Unlimited activities and groups</td>
+				<td class="yes"></td>
+			</tr>
+			<tr>
+				<td>Give hourly rate to activities</td>
+				<td class="yes"></td>
+			</tr>
+			<tr>
+				<td>Record activities</td>
+				<td class="yes"></td>
+			</tr>
+			<tr>
+				<td>Record Time</td>
+				<td class="yes"></td>
+			</tr>
+			<tr>
+				<td>Generate and download reports</td>
+				<td class="yes"></td>
+			</tr>
+			<tr>
+				<td>Ad free</td>
+				<td class="yes"></td>
+			</tr>
+			<tr>
+				<td>trial period</td>
+				<td class="text">30 days</td>
+			</tr>
+		</table>
+		
+		<a href="/account/signup/" class="signup_button">Signup for 30 day free trial</a>
+
+		<ul class="signup_questions">
+			<li>
+				<h2>What types of payment can I use?</h2>
+				<p>You can pay with MasterCard, Visa and American Express via PayPal</p>
+			</li>
+			<li>
+				<h2>Do I need a credit card for signup?</h2>
+				<p>No signing up for a free trial does not require use of a credit card.</p>
+			</li>
+			<li>
+				<h2>Do I choose a plan now?</h2>
+				<p>No. Everyone starts with the free trial, which lasts for 30 days and when you are ready you can purchace your account your account.</p>
+			</li>
+			<li class="clear"></li>
+		</ul>
+	</div>
+{% endblock main %}

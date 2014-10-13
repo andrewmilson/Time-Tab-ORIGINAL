@@ -1,0 +1,705 @@
+.main .secondary_container{
+	visibility: hidden;
+}
+.time_container{
+	height: 299px;
+	margin: 15px 0 0 10px;
+	position: relative;
+	width: 898px;
+}
+.dialogue_box{
+	background: transparent;
+	height: 1px;
+	margin: 0;
+	position: relative;
+	width: 868px;
+	z-index: 10000;
+}
+.dialogue_box .dial_container{
+	background: #fff;
+	box-shadow: 0 1px 8px 0 rgba(0,0,0,0.3);
+	display: none;
+	height: auto;
+	left: 600px;
+	position: absolute;
+	top: 10px;
+	width: 300px;
+	z-index: 1;
+}
+.dialogue_box .dial_container:hover{
+	display: block;
+}
+.dialogue_box .dial_container .dial_title{
+	background: #F77F00;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom-color: rgba(0, 0, 0, 0.2);
+	color: #fff;
+	display: block;
+	font-family: Arial;
+	font-size: 13px;
+	height: 26px;
+	line-height: 27px;
+	margin: 0 0 0 0;
+	position: relative;
+	text-align: center;
+	width: auto;
+}
+.dialogue_box .dial_container .dial_title .arrow{
+	border: 6px solid transparent;
+	border-bottom-color: #F77F00;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin-left: -6px;
+	position: absolute;
+	top: -11px;
+	width: 0;
+}
+.dialogue_box .dial_container .dial_content{
+	padding: 0 6px 6px;
+}
+.dialogue_box .dial_container .dial_content p{
+	color: #222;
+	font-family: Helvetica,Arial;
+	font-size: 12px;
+	font-weight: 700;
+	margin: 12px 0 0;
+	padding: 0;
+}
+.dialogue_box .dial_container .dial_content p .dial_intext{
+	background: #eee;
+	border: 1px solid #ccc;
+	border-top-color: #bbb;
+	color: #777;
+	font-weight: 700;
+	height: 18px;
+	outline: none;
+	-webkit-transition: border-color 0.2s linear;
+	-moz-transition: border-color 0.2s linear;
+	-o-transition: border-color 0.2s linear;
+	-ms-transition: border-color 0.2s linear;
+	padding: 0 5px;
+}
+.dialogue_box .dial_container .dial_content p .dial_intext.center_text{
+	text-align: center;
+}
+.dialogue_box .dial_container .dial_content p #from, .dialogue_box .dial_container .dial_content p #to{
+	margin: 0 2px 0 0;
+}
+
+.dialogue_box .dial_container .dial_content p .from_period, .dialogue_box .dial_container .dial_content p .to_period{
+	margin: 0 5px 0 0;
+	/*-webkit-appearance: none;
+   	height: 20px;
+	padding: 0 5px 1px 15px;
+	border-radius: 0 3px 3px 0;
+	outline: none;
+	border: solid 1px #A6A6A6;
+	border-left: none;
+	display: inline-block;
+	background: url("../images/icons/dropdown.gif"), #ffffff;
+	background: url("../images/icons/dropdown.gif"), -moz-linear-gradient(top,  #ffffff 0%, #f7f7f7 45%, #ececec 55%, #eeeeee 100%);
+	background: url("../images/icons/dropdown.gif"), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(45%,#f7f7f7), color-stop(55%,#ececec), color-stop(100%,#eeeeee));
+	background: url("../images/icons/dropdown.gif"), -webkit-linear-gradient(top,  #ffffff 0%,#f7f7f7 45%,#ececec 55%,#eeeeee 100%);
+	background: url("../images/icons/dropdown.gif"), -o-linear-gradient(top,  #ffffff 0%,#f7f7f7 45%,#ececec 55%,#eeeeee 100%);
+	background: url("../images/icons/dropdown.gif"), -ms-linear-gradient(top,  #ffffff 0%,#f7f7f7 45%,#ececec 55%,#eeeeee 100%);
+	background: url("../images/icons/dropdown.gif"), linear-gradient(to bottom,  #ffffff 0%,#f7f7f7 45%,#ececec 55%,#eeeeee 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
+	background-repeat: no-repeat;
+	background-position: 3px 3px, 0 0;*/
+	width: 50px;
+}
+
+.dialogue_box .dial_container .dial_content p textarea{
+	background: #eee;
+	border: 1px solid #ccc;
+	font-weight: 700;
+	height: 45px;
+	margin: 0;
+	max-width: 276px;
+	min-height: 45px;
+	min-width: 276px;
+	outline: none;
+	padding: 5px;
+	width: 276px;
+}
+.dialogue_box .dial_container .dial_controlls{
+	height: 35px;
+}
+.dialogue_box .dial_container .dial_controlls .dial_btn{
+	background-color: #f5f5f5;
+	background-position: 6px 4px;
+	background-repeat: no-repeat;
+	border: 1px solid;
+	border-bottom-color: #888;
+	border-left-color: #aaa;
+	border-right-color: #bbb;
+	border-top-color: #ccc;
+	color: #222;
+	cursor: pointer;
+	display: block;
+	float: right;
+	font-family: Helvetica,Arial;
+	font-size: 12px;
+	font-weight: 700;
+	height: 22px;
+	line-height: 22px;
+	margin: 5px 6px 0 0;
+	padding: 0 8px 0 24px;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+}
+.dialogue_box .dial_container .dial_controlls .dial_btn.dial_left{
+	float: left;
+	margin: 5px 0 0 6px;
+}
+.dialogue_box .dial_container .dial_controlls .dial_btn:active{
+	border-bottom-color: #ccc;
+	border-left-color: #bbb;
+	border-right-color: #aaa;
+	border-top-color: #888;
+}
+.main .tools_sub_nav .activity_demo_color{
+	background: #F77F00;
+	border: 1px solid rgba(0,0,0,0.15);
+	display: block;
+	float: left;
+	position: relative;
+	height: 19px;
+	margin: 2px 0 0 6px;
+	border-radius: 3px 0 0 3px;
+	width: 19px;
+}
+.bar_container{
+	background: #888;
+	border: solid 1px #ddd;
+	border-bottom: 0;
+	clear: none;
+	height: 40px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 868px;
+}
+.bar_container.last_slider{
+	border-bottom: 1px solid #ddd;
+}
+.bar_left{
+	cursor: ew-resize;
+	display: block;
+	height: 34px;
+	margin-right: -8px;
+	position: absolute;
+	right: 100%;
+	width: 16px;
+	z-index: 1;
+}
+.bar_right{
+	cursor: ew-resize;
+	display: block;
+	height: 34px;
+	left: 100%;
+	margin-left: -8px;
+	position: absolute;
+	width: 16px;
+	z-index: 1;
+}
+.controls{
+	float: right;
+	height: 1px;
+	position: relative;
+	width: 868px;
+}
+.wrapper .main .tools_sub_nav li.reload_slider{
+	background-position: 6px 6px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	display: block;
+	height: 24px;
+	padding: 0;
+	width: 24px;
+	background: url(../images/icons/reload.gif) no-repeat, #ddd;
+	background-position: 4px 4px;
+}
+.wrapper .main .tools_sub_nav li.right,.wrapper .main .tools_sub_nav li.left{
+	background-position: 6px 6px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	display: block;
+	height: 24px;
+	-moz-transition: all .1s linear;
+	-ms-transition: all .1s linear;
+	-o-transition: all .1s linear;
+	padding: 0;
+	-webkit-transition: all .1s linear;
+	width: 30px;
+}
+.wrapper .main .tools_sub_nav li.right{
+	background: url(../images/icons/arrow_left.gif) no-repeat, #ddd;
+	background-position: 8px 6px;
+}
+.wrapper .main .tools_sub_nav li.right:hover{
+	background-position: 4px 6px;
+}
+.wrapper .main .tools_sub_nav li.left{
+	background: url(../images/icons/arrow_right.gif) no-repeat, #ddd;
+	background-position: 9px 6px;
+	float: right;
+}
+.wrapper .main .tools_sub_nav li.left:hover{
+	background-position: 13px 6px;
+}
+.bar{
+	background: #eee;
+	height: 40px;
+	left: 0;
+	position: absolute;
+	width: 2880px;
+}
+.bar_inner{
+	height: 34px;
+	position: absolute;
+	top: 3px;
+	z-index: 20;
+}
+.bar_inner.record_activity{
+	background: url("/static/images/icons/stripe.png");
+	animation: move_stripe 1.2s infinite linear;
+	-moz-animation: move_stripe 1.2s infinite linear;
+	-ms-animation: move_stripe 1.2s infinite linear;
+	-o-animation: move_stripe 1.2s infinite linear;
+	-webkit-animation: move_stripe 1.2s infinite linear;
+}
+@keyframes move_stripe {
+	0%{ background-position: 0px 0px; }
+	100%{ background-position: 0px 34px; }
+}
+@-webkit-keyframes move_stripe {
+	0%{ background-position: 0px 0px; }
+	100%{ background-position: 0px 34px; }
+}
+@-moz-keyframes move_stripe {
+	0%{ background-position: 0px 0px; }
+	100%{ background-position: 0px 34px; }
+}
+@-o-keyframes move_stripe {
+	0%{ background-position: 0px 0px; }
+	100%{ background-position: 0px 34px; }
+}
+@-ms-keyframes move_stripe {
+	0%{ background-position: 0px 0px; }
+	100%{ background-position: 0px 34px; }
+}
+.bar_inner .time{
+	color: #000;
+	display: block;
+	cursor: pointer;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 34px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+.appender{
+	height: 40px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.time_lines span{
+	background: transparent;
+	border-left: 1px solid #ccc;
+	color: #999;
+	display: block;
+	float: left;
+	font-family: Arial;
+	font-size: 10px;
+	height: 40px;
+	line-height: 36px;
+	margin: 0 0 0 119px;
+	position: relative;
+	text-indent: 5px;
+	width: 0;
+}
+.time_lines span:first-child{
+	border-left-color: transparent;
+	margin-left: 0;
+}
+.left_timepoint, .right_timepoint{
+	background: #000;
+	color: #fff;
+	display: block;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: 700;
+	height: 20px;
+	left: 35px;
+	line-height: 20px;
+	position: absolute;
+	text-align: center;
+	top: 10px;
+	width: 50px;
+	z-index: 2000;
+}
+.left_timepoint .arrow{
+	border-bottom: solid 4px transparent;
+	border-left: solid 4px #000;
+	border-right: solid 4px transparent;
+	border-top: solid 4px transparent;
+	cursor: ew-resize;
+	height: 0;
+	left: 100%;
+	position: absolute;
+	top: 6px;
+	width: 0;
+}
+.right_timepoint .arrow{
+	border-bottom: solid 4px transparent;
+	border-left: solid 4px transparent;
+	border-right: solid 4px #000;
+	border-top: solid 4px transparent;
+	cursor: ew-resize;
+	height: 0;
+	position: absolute;
+	right: 100%;
+	top: 6px;
+	width: 0;
+}
+.left_mover,.right_mover{
+	display: block;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	width: 40px;
+	z-index: 200000000;
+}
+.left_mover{
+	left: 0;
+}
+.right_mover{
+	right: 0;
+}
+.time_pointer{
+	background: #000;
+	color: #fff;
+	display: none;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	height: 22px;
+	left: 0;
+	line-height: 22px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 50px;
+	z-index: 200000001;
+}
+.time_pointer:before{
+	border-bottom: 4px solid transparent;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #000;
+	content: "";
+	height: 0;
+	left: 50%;
+	margin-left: -4px;
+	position: absolute;
+	top: 100%;
+	width: 0;
+}
+.current_time{
+	background: #900;
+	display: block;
+	height: 36px;
+	left: -20px;
+	position: absolute;
+	top: 2px;
+	width: 2px;
+	z-index: 500;
+}
+.prime_slider_container{
+	float: right;
+}
+.prime_slider_container .day_date_hover{
+	width: 75px;
+	height: 41px;
+	position: absolute;
+	left: -85px;
+	display: none;
+	top: 41px;
+}
+.prime_slider_container .day_date_hover span.cus_date_text{
+	display: block;
+	width: 100%;
+	height: 25px;
+	margin-top: 8px;
+	text-align: center;
+	background: #292929;
+	line-height: 26px;
+	color: #eee;
+	font-family: Helvetica, Arial;
+	text-shadow: 0 1px 0 #000;
+	font-size: 12px;
+}
+.prime_slider_container .day_date_hover span.arrow{
+	display: block;
+	position: absolute;
+	left: 100%;
+	top: 15px;
+	border: 5px solid transparent;
+	height: 0;
+	width: 0;
+	border-left-color: #292929;
+}
+.day_bar{
+	background: #222;
+	color: #aaa;
+	float: left;
+	font-family: Consolas,"Lucida Console","Andale Mono",Helvetica,Arial;
+	font-size: 11px;
+	height: 288px;
+	left: -1px;
+	position: absolute;
+	top: 0;
+	width: 30px;
+	z-index: 100000;
+}
+.day_bar span{
+	display: block;
+	height: 41px;
+	line-height: 41px;
+	text-align: center;
+	cursor: default;
+	width: 30px;
+}
+.wrapper .prime_slider_container .ban_slider{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-family: Georgia;
+	text-align: center;
+	background: #000;
+	color: #ddd;
+	font-size: 16px;
+	line-height: 50px;
+	z-index: 100;
+	width: 390px;
+	margin: -30px 0 0 -185px;
+	height: 50px;
+}
+.wrapper .prime_slider_container .ban_slider:before{
+	position: absolute;
+	left: 0;
+	top: 100%;
+	content: "";
+	border: 8px solid transparent;
+	border-left-color: #000;
+	border-top-color: #000;
+}
+.main .tools_sub_nav .tools_activity_record{
+	display: block;
+	float: left;
+	height: 19px;
+	padding: 0 5px 0 5px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	color: #222;
+	line-height: 20px;
+	border-radius: 0 3px 3px 0;
+	margin: 2px 0 0 0;
+	border: 1px solid #aaa;
+	background: #ddd;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.main .tools_sub_nav .tools_activity_record:hover{
+	background: #ccc;
+}
+.activities .activities_main ul.activity_stuff span.root_activities{
+	display: none;
+	width: 878px;
+	background: #f7cfcf;
+	margin: 20px 0 10px 3px;
+	display: block;
+	height: 25px;
+	line-height: 25px;
+	font-family: Helvetica, Arial;
+	font-size: 15px;
+	font-weight: bold;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+	color: #ce6767;
+	padding: 5px;
+	text-align: center;
+	border-radius: 0px;
+	border: 3px dashed #edb8b8;
+	outline: 3px solid #f7cfcf;
+}
+.tools_sub_nav .the_datepicker{
+	left: 41px;
+	top: 21px;
+	width: auto;
+}
+.cus_alert .alert_inner.add_activity_ui ul, .cus_alert .alert_inner.add_group_ui ul, .cus_alert .alert_inner.edit_activity_ui ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.cus_alert .alert_inner.add_activity_ui ul li, .cus_alert .alert_inner.add_group_ui ul li, .cus_alert .alert_inner.edit_activity_ui ul li{
+	margin: 5px 0 5px 0;
+	padding: 0;
+	width: 100%;
+}
+.cus_alert .alert_inner.add_activity_ui ul li label, .cus_alert .alert_inner.add_group_ui ul li label, .cus_alert .alert_inner.edit_activity_ui ul li label{
+	font-weight: bold;
+	font-family: Helvetica, Arial;
+	font-size: 12px;
+	display: inline-block;
+	width: 150px;
+	padding: 0 5px 0 0;
+	text-align: right;
+}
+.cus_alert .alert_inner.add_activity_ui ul li input, .cus_alert .alert_inner.add_group_ui ul li input, .cus_alert .alert_inner.edit_activity_ui ul li input{
+	background: #eee;
+	border: 1px solid #ccc;
+	border-top-color: #bbb;
+	color: #222;
+	font-weight: bold;
+	width: 150px;
+	height: 18px;
+	outline: none;
+	padding: 0 5px;
+	text-align: left;
+}
+.cus_alert .alert_inner.add_activity_ui ul li select, .cus_alert .alert_inner.add_group_ui ul li select, .cus_alert .alert_inner.edit_activity_ui ul li select{
+	min-width: 162px;
+	margin-left: 0;
+}
+.cus_alert .alert_inner.add_activity_ui ul li.add_activity_color, .cus_alert .alert_inner.edit_activity_ui ul li.add_activity_color{
+	width: 420px;
+}
+.cus_alert .alert_inner .add_activity_color span{
+	display: block;
+	float: left;
+	border: 0px solid #000;
+	height: 25px;
+	margin: 10px 10px 0 0;
+	width: 25px;
+}
+.wrapper .cus_alert .alert_inner .add_activity_color span#default{
+	border: solid 3px #000;
+	height: 19px;
+	width: 19px;
+}
+
+.cus_alert .alert_inner.add_activity_ui .color_pannel_add_activity, .cus_alert .alert_inner.edit_activity_ui .color_pannel_add_activity{
+	background: #000;
+	width: 162px;
+	font-weight: bold;
+	height: 20px;
+	margin: 0 0 -5px 0;
+	display: inline-block;
+}
+
+.activities_main .color_select{
+	background: #fff;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+	position: absolute;
+	left: 6px;
+	top: 32px;
+	display: none;
+	z-index: 1;
+	padding: 0 10px 10px 0;
+	width: 300px;
+	height: 75px;
+}
+
+.activities_main .color_select:before{
+	content: "";
+	border: 5px solid transparent;
+	border-bottom-color: #fff;
+	position: absolute;
+	bottom: 100%;
+	left: 3px;
+}
+
+.activities_main .color_select span{
+	width: 15px;
+	height: 15px;
+	display: block;
+	float: left;
+	margin: 10px 0 0 10px;
+}
+.activities_main .color_select span#default{
+	border: solid 2px #000;
+	width: 11px;
+	height: 11px;
+}
+.activities .activities_main input{
+	background: #f9f9f9;
+	border: solid 1px #aaa;
+	height: 18px;
+	width: 125px;
+	line-height: 18px;
+	margin: 5px 0 0 0;
+	float: left;
+	padding: 0 3px 0 3px;
+	outline: none;
+	font-size: 12px;
+	font-family: Arial;
+}
+
+.activities .activities_main .name input{
+	font-weight: bold;
+}
+
+.activities .activities_main .save_name, .activities .activities_main .cancel_name{
+	display: block;
+	float: left;
+	height: 18px;
+	padding: 0 5px 0 5px;
+	font-family: “Lucida Sans Unicode”, Lucida Grande;
+	margin: 5px 0 0 5px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	line-height: 18px;
+	background: #3D629E;
+	border: solid 1px #2d5089;
+	font-weight: bold;
+	font-size: 12px;
+	color: #e5efff;
+	text-decoration: none;
+}
+
+.activities .activities_main .save_name:hover, .activities .activities_main .cancel_name:hover{
+	color: #fff;
+	background: #4971af;
+}
+
+.warning_teller{
+	font-family: Arial;
+	font-size: 13px;
+	color: #eee;
+	position: absolute;
+	display: none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+	font-weight: bold;
+	z-index: 100000;
+	background: #3D629E;
+	width: 300px;
+	padding: 10px;
+}
+
+.warning_teller .arrow{
+	border: solid 6px transparent;
+	border-right-color: #3D629E;
+	position: absolute;
+	right: 100%;
+	top: 50%;
+	margin-top: -6px;
+}

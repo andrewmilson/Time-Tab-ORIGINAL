@@ -1,0 +1,15 @@
+{% extends "template/base_login.html" %}
+
+{% block title %}Signup{% endblock title %}
+
+{% block body %}
+	<a class="google_login" href="{% url 'socialauth_begin' 'google' %}">Signup with Google</a>
+	<form action="{{ current_path }}" method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<p class="submit_container">
+			<input type="submit" value="Signup"/>
+		</p>
+	</form>
+	<span class="terms">By signing up above you confirm that you accept the <a href="http://mytimetab.com/terms/" target="black">terms of service</a>. Already signed up? <a href="/account/login/">Login Here</a>.</span>
+{% endblock body %}

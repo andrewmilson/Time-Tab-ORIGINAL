@@ -1,0 +1,29 @@
+{% extends "template/base_login.html" %}
+
+{% block title %}Login{% endblock title %}
+
+{% block body %}
+	{% if state %}
+		{% autoescape off %}
+			<span class="state">{{ state }}</span>
+		{% endautoescape %}
+	{% endif %}
+
+	{% if not request.user.is_authenticated %}
+		<a class="google_login" href="{% url 'socialauth_begin' 'google' %}">Login with Google</a>
+		<form action="{{ current_path }}" method="post">
+			{% csrf_token %}
+			{% csrf_token %}
+			{{ form.as_p }}
+			<p class="submit_container">
+				<input type="submit" value="Login"/>
+			</p>
+		</form>
+	{% endif %}
+{% endblock body %}
+
+{% block info %}
+	{% if not request.user.is_authenticated %}
+		<a href="/account/password/reset/">Forgot password?</a>. New User? <a class="register" href="/account/signup/">Register Here</a>
+	{% endif %}
+{% endblock info %}

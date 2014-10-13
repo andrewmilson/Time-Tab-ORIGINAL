@@ -1,0 +1,57 @@
+{% extends "template/base_home.html" %}
+
+{% block title %}Home &#183; Easy &amp; Free Time Tracking{% endblock title %}
+
+{% block head %}
+	<link href='http://fonts.googleapis.com/css?family=Oswald:300,700' rel='stylesheet' type='text/css'>
+	<link href="/static/css/colorbox.css" rel="stylesheet" type='text/css'>
+	<script src="/static/js/libs/jquery.js" type="text/javascript"></script>
+	<script src="/static/js/libs/colorbox.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("a.tour_images").colorbox({
+				rel: "tour_images",
+				next: "next",
+				previous: "prev"
+			});
+
+			$("a.promo_video").colorbox({
+				href: 'http://www.youtube.com/embed/Kyj1YqdU1sc?vq=large&autoplay=1&autohide=1',
+				width: '640px',
+				height: '480px',
+				iframe: true
+			});
+		});
+	</script>
+{% endblock head %}
+
+{% block main %}
+	<div class="descrip_container">
+		<a href="" class="promo_video"><img src="/static/images/general/video-play.jpg" alt=""></a>
+		<div class="descrip">
+			<h1><span>Time Tab</span> - Easy &amp; Free Time Tracking</h1>
+			<p>Time Tab is an easy and Free to use online web app for tracking and reporting your time. It's very intuitive and makes time tracking and reporting a fast and simple process. The app is currently not available for mobile devices.</p>
+			<div class="home_action"><a href="/account/signup/">Signup for free</a></div>
+		</div>
+	</div>
+
+	<ul class="tour_list">
+		<li><a class="tour_images" href="/static/images/general/home/display/slider_screenshot.png"><img src="/static/images/general/home/display/slider_screenshot_small.png" alt="Activities and Groups"/></a><p><strong>Tracking your time on the slider</strong></p>Tracking your time is made easy by Time Tabs slider, which allows you to just click and drag to make a time record. Apply hourly rates to time records or activities, create activities and groups, record activities with the click of a button and much more.
+			<!-- Create activities and groups to manage and sort the things you do and mark them as billable so you can record time by hourly rate. Tracking time is so easy and with the time slider it makes it fast, simple and easy to understand. You can also record activities by the click of a button. --></p></li>
+		<li><a class="tour_images" href="/static/images/general/home/display/report_screenshot.png"><img src="/static/images/general/home/display/report_screenshot_small.png" alt="Easily Track Time"/></a><p><strong>Personalize your own informative reports</strong></p>Generate, print and download informative reports to csv and pdf. Also personalizing reports is easy and you are able to round all your time to different time intervals, hide or show empty activities and groups and create your own custom fields at the top of a report.</li>
+	</ul>
+
+	<div class="advert">
+		<center>
+			<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle"
+			     style="display:inline-block;width:728px;height:90px"
+			     data-ad-client="ca-pub-7847198113999424"
+			     data-ad-slot="4204798596"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</center>
+	</div>
+{% endblock main %}

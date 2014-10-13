@@ -1,0 +1,151 @@
+*{
+	font-family: Arial;
+}
+
+body{
+	background: #79a8ce;
+}
+form{
+	width: 300px;
+	padding: 6px 10px 0 10px;
+	margin: 8px auto;
+	border: 1px solid #153660;
+	background: #4569a0;
+}
+img.logo{
+	margin: 15px auto 0 auto;
+	display: block;
+}
+form label{
+	font-weight: bold;
+	font-size: 12px;
+	display: block;
+	color: #fff;
+	text-shadow: 0 1px 0 #000;
+	height: 25px;
+	width: 100%;
+	text-align: left;
+	float: none;
+	line-height: 25px;
+}
+span.state{
+	display: block;
+	width: 300px;
+	padding: 10px;
+	margin: 8px auto 0 auto;
+	background: #36a561;
+	color: #222;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	border: #2a8e51 1px solid;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 20px;
+}
+span.state a{
+	border-bottom: dotted 1px #000;
+	color: #000;
+	text-decoration: none;
+}
+form p{
+	padding: 0;
+	margin: 0 0 10px 0;
+	height: auto;
+}
+form a{
+	color: #bfdeff;
+	text-decoration: none;
+}
+form a:hover{
+	text-decoration: underline;
+}
+form p.submit_container{
+	height: 35px;
+	margin: 0 0 0 0;
+}
+form p.submit_container label{
+	display: inline;
+	float: none;
+	font-weight: normal;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 0 0 8px;
+	cursor: pointer;
+}
+form input[type="text"], form input[type="password"]{
+	width: 288px;
+	height: 22px;
+	padding: 3px 5px 0 5px;
+	margin: 0;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #222;
+	background: #f5f5f5;
+	border: 1px solid #153660;
+	outline: none;
+	display: block;
+}
+form input.error{
+	background: #eec3c7;
+}
+form input[type="text"]#id_captcha_1{
+	float: right;
+	width: 200px;
+}
+img.captcha{
+	float: none;
+	height: 27px;
+	margin: 0;
+}
+form input[type="submit"]{
+	background: #333;
+	color: #fff;
+	border: 1px solid #222;
+	cursor: pointer;
+	width: 100%;
+	text-shadow: 0 1px 0 #000;
+	margin: 2px 0 0 0;
+	height: 25px;
+	display: block;
+	float: left;
+	padding: 0 10px 0 10px;
+	line-height: 20px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+a.google_login{
+	display: block;
+	padding: 0 6px 0 28px;
+	height: 26px;
+	width: 286px;
+	color: #222;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 26px;
+	background: url("../images/icons/google.png") no-repeat 5px 5px, #eee;
+	border: solid 1px #fff;
+	margin: 8px auto 0 auto;
+	-webkit-transition: all 0.04s linear;
+	-moz-transition: all 0.04s linear;
+	-o-transition: all 0.04s linear;
+	-ms-transition: all 0.04s linear;
+}
+a.google_login:hover{
+	padding: 0 0 0 34px;
+}
+.errorlist{
+	display: none;
+}
+span.terms{
+	font-size: 12px;
+	line-height: 16px;
+	display: block;
+	width: 322px;
+	color: #222;
+	margin: 0 auto 5px auto;
+}
+span.terms a{
+	font-weight: bold;
+	color: #222;
+	text-decoration: none;
+}

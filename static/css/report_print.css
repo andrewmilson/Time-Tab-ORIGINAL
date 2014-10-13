@@ -1,0 +1,51 @@
+@page{
+	size: portrait;
+}
+
+*{
+	background: none !important;
+}
+
+.no_print{
+	display: none !important;
+}
+
+.prime_report_container #report_canvas_preview .group_name{
+	border: none;
+	border-left: 5px solid #ccc;
+}
+
+.prime_report_container #report_canvas_preview .activity_name{
+	border: none;
+	border-left: 5px solid #999;
+	padding-right: 0;
+}
+
+.prime_report_container .report_preview_scroll{
+	overflow: visible;
+	border: none;
+}
+
+.activity_total{
+	color: #444 !important;
+}
+
+.prime_report_container #report_canvas_preview ul.root_activities .meta{
+	margin: 0 0 30px 15px;
+}
+
+.prime_report_container #report_canvas_preview ul.root_activities .meta div{
+	margin: 0;
+}
+
+.prime_report_container #report_canvas_preview ul.root_activities .meta div input.line{
+	border: none;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	padding: 2px;
+}
+
+.prime_report_container #report_canvas_preview ul.root_activities > .meta a{
+	display: none !important;
+}

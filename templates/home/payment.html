@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Paid account &midot; Time Tab</title>
+	</head>
+	<body>
+		{% if paid %}
+			<h2>Thank you! You are currently Registered.</h2>
+			<p id="page-intro">You can cancel anytime online using your PayPal account or from this page. If you have any questions or problems please.</p>
+			<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias={{ encoded_email }}" _fcksavedurl="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias={{ encoded_email }}"><img border="0" src="https://www.paypal.com/en_US/i/btn/btn_unsubscribe_LG.gif"></a>
+		{% else %}
+			<h2>Please Sign up to Time Tab using PayPal.</h2>
+			<p id="page-intro">You can cancel anytime online using your PayPal account or on this page.If you have any questions or problems please.</p>
+			{{ form.render }}
+		{% endif %}
+	</body>
+</html>

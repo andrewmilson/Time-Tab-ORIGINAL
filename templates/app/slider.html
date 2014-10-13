@@ -1,0 +1,368 @@
+{% extends "template/base.html" %}
+
+{% block title %}Slider{% endblock title %}
+
+{% block head %}
+	<link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/static/css/slider.css" rel="stylesheet" type="text/css"/>
+	<link href="/static/css/datepicker.css" rel="stylesheet"/>
+	<link href="/static/css/print.css" rel="stylesheet" media="print"/>
+	<script src="/static/js/require.js" data-main="/static/js/slider.js"></script>
+{% endblock head %}
+
+{% block main %}
+	<span class="loading_defaults">Loading Smoothly</span>
+	<div class="secondary_container">
+		<ul class="tools_sub_nav">
+			<li class="left"></li>
+			<li class="right"></li>
+			<li class="reload_slider"></li>
+			<li class="date_container"><span class="sub_nav_item">Date</span>
+				<a class="date_pick" href="#"></a>
+				<span class="date_day">Monday 18 October 2012</span>
+				<span class="current_day_text">today</span>
+				<div class="the_datepicker"></div>
+			</li>
+			<li><span class="sub_nav_item">Activity</span><span class="activity_demo_color"></span>
+				<select class="activity_select">
+				</select>
+				<a class="tools_activity_record" href="#">Record</a>
+			</li>
+		</ul><!-- end .tools_sub_nav -->
+		
+		<div class="status">	
+		</div><!-- end status -->
+		
+		<div class="time_container">
+			<div class="time_pointer"></div>
+			<div class="day_bar">
+				<span class="0 sunday_text day_text first_text">sun</span>
+				<span class="1 monday_text day_text">mon</span>
+				<span class="2 tuesday_text day_text">tue</span>
+				<span class="3 wednesday_text day_text">wed</span>
+				<span class="4 thursday_text day_text">thu</span>
+				<span class="5 friday_text day_text active_day_text">fri</span>
+				<span class="6 saturday_text day_text">sat</span>
+			</div><!-- end .day_bar -->
+		
+			<div class="prime_slider_container">
+				<div class="ban_slider">Please create an activity before you use the slider.</div>
+				<div class="day_date_hover">
+					<span class="cus_date_text">12.05.2012</span>	
+					<span class="arrow"></span>
+				</div>
+				<div class="bar_container sunday_container 0 first_slider">
+					<div class="left_mover"></div>
+					<div class="right_mover"></div>
+					<div class="bar">
+						<div class="left_timepoint"><span class="lefttime_value"></span><span class="arrow"></span></div>
+						<div class="right_timepoint"><span class="righttime_value"></span><span class="arrow"></span></div>
+						<span class="current_time"></span>
+						<div class="appender">
+						</div>
+					</div>
+				</div><!-- end sunday .bar_contatiner -->
+				
+				<div class="bar_container monday_container 1">
+					<div class="left_mover"></div>
+					<div class="right_mover"></div>
+					<div class="bar">
+						<div class="left_timepoint"><span class="lefttime_value"></span><span class="arrow"></span></div>
+						<div class="right_timepoint"><span class="righttime_value"></span><span class="arrow"></span></div>
+						<span class="current_time"></span>
+						<div class="appender">
+						</div>
+					</div>
+				</div><!-- end monday .bar_contatiner -->
+				
+				<div class="bar_container tuesday_container 2">
+					<div class="left_mover"></div>
+					<div class="right_mover"></div>
+					<div class="bar">
+						<div class="left_timepoint"><span class="lefttime_value"></span><span class="arrow"></span></div>
+						<div class="right_timepoint"><span class="righttime_value"></span><span class="arrow"></span></div>
+						<span class="current_time"></span>
+						<div class="appender">
+						</div>
+					</div>
+				</div><!-- end tuesday .bar_contatiner -->
+				
+				<div class="bar_container wednesday_container 3">
+					<div class="left_mover"></div>
+					<div class="right_mover"></div>
+					<div class="bar">
+						<div class="left_timepoint"><span class="lefttime_value"></span><span class="arrow"></span></div>
+						<div class="right_timepoint"><span class="righttime_value"></span><span class="arrow"></span></div>
+						<span class="current_time"></span>
+						<div class="appender">
+						</div>
+					</div>
+				</div><!-- end wednesday .bar_contatiner -->
+				
+				<div class="bar_container thursday_container 4">
+					<div class="left_mover"></div>
+					<div class="right_mover"></div>
+					<div class="bar">
+						<div class="left_timepoint"><span class="lefttime_value"></span><span class="arrow"></span></div>
+						<div class="right_timepoint"><span class="righttime_value"></span><span class="arrow"></span></div>
+						<span class="current_time"></span>
+						<div class="appender">
+						</div>
+					</div>
+				</div><!-- end thursday .bar_contatiner -->
+				
+				<div class="bar_container friday_container 5">
+					<div class="left_mover"></div>
+					<div class="right_mover"></div>
+					<div class="bar">
+						<div class="left_timepoint"><span class="lefttime_value"></span><span class="arrow"></span></div>
+						<div class="right_timepoint"><span class="righttime_value"></span><span class="arrow"></span></div>
+						<span class="current_time"></span>
+						<div class="appender">
+						</div>
+					</div>
+				</div><!-- end friday .bar_contatiner -->
+				
+				<div class="bar_container saturday_container 6 last_slider">
+					<div class="left_mover"></div>
+					<div class="right_mover"></div>
+					<div class="bar">
+						<div class="left_timepoint"><span class="lefttime_value"></span><span class="arrow"></span></div>
+						<div class="right_timepoint"><span class="righttime_value"></span><span class="arrow"></span></div>
+						<span class="current_time"></span>
+						<div class="appender">
+						</div>
+					</div>
+				</div><!-- end saturday .bar_contatiner -->
+			</div><!-- end .prime_slider_container -->
+			
+			<div class="controls">
+				<div class="dialogue_box">
+					<div class="dial_container">
+						<span class="dial_title"><span class="dial_activity_name">Activity: 
+							<select class="activity_dial_select">
+
+							</select>
+						</span><span class="arrow"></span></span>
+						
+						<div class="dial_content">
+							<p>
+								<label for="from">From: </label>
+								<input name="from" id="from" class="dial_intext center_text" type="text" size="3" value="06:45"/>
+								
+								<label for="to">To: </label>
+								<input name="to" id="to" class="dial_intext center_text" type="text" value="10:30" size="3"/>
+							</p>
+							<p class="dial_billable_section">
+								<label for="billable">Billable: </label><input id="billable" name="billable" type="checkbox" style="margin: 0px 10px 0 2px;"/><label for="hour_pay">Hourly rate: <span style="color: #777;" class="hour_rate_currency">$</span></label><input id="hour_pay" class="dial_intext" type="text" size="5"/>
+							</p>
+							<p>
+								<textarea class="dial_description" placeholder="description"></textarea>
+							</p>
+						</div>
+						
+						<div class="dial_controlls">
+							<span style="background-image: url('/static/images/icons/cross.gif');" class="dial_btn dial_cancel dial_left">Cancel</span>
+							<span style="background-image: url('/static/images/icons/save.gif');" class="dial_btn dial_save">Save</span>
+							<span style="background-image: url('/static/images/icons/stoprecording.gif');" class="dial_btn dial_stop">Stop Recording</span>
+							<span style="background-image: url('/static/images/icons/trash_can_small.gif');" class="dial_btn dial_delete">Delete</span>
+						</div>
+					</div>
+				</div>
+			</div><!-- end .controlls -->
+		</div><!-- end .time_container -->
+		
+		<div class="advert"><center><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-7847198113999424"
+     data-ad-slot="3698597796"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center></div>
+
+		<div class="sector activities">
+			<div class="activities_nav main_nav">
+				<h3>Activities</h3>
+				<ul>
+					<li><a href="#" class="new_activity" onclick="return false"><img style="position: absolute; left: 12px; top: 5px;" src="/static/images/icons/activity.gif"/>Add activity</a></li>
+					<li><a href="#" class="new_group" onclick="return false"><img style="position: absolute; left: 14px; top: 5px;" src="/static/images/icons/folder.gif"/>New Group</a></li>
+				</ul>
+			</div>
+			<div class="activities_main">
+				<div class="color_select">
+					<span class="d64848" style="background: #d64848;"></span>
+					<span class="8B1A1A" style="background: #8B1A1A;"></span>
+					<span class="bc0000" style="background: #bc0000;"></span>
+					<span class="8B3A3A" style="background: #8B3A3A;"></span>
+					<span class="FFADB9" style="background: #FFADB9;"></span>
+					<span class="EE799F" style="background: #EE799F;"></span>
+					<span class="CC3299" style="background: #CC3299;"></span>
+					<span class="DA70D6" style="background: #DA70D6;"></span>
+					<span class="990099" style="background: #990099;"></span>
+					<span class="9B30FF" style="background: #9B30FF;"></span>
+					<span class="CC00FF" style="background: #CC00FF;"></span>
+					<span class="4169E1" style="background: #4169E1;"></span>
+					<span class="499DF5" style="background: #499DF5;"></span>
+					<span class="82CFFD" style="background: #82CFFD;"></span>
+					<span class="50A6C2" style="background: #50A6C2;"></span>
+					<span class="008B45" style="background: #008B45;"></span>
+					<span class="55AE3A" style="background: #55AE3A;"></span>
+					<span class="556B2F" style="background: #556B2F;"></span>
+					<span class="3CB371" style="background: #3CB371;"></span>
+					<span class="FCDC3B" style="background: #FCDC3B;"></span>
+					<span class="ffbb00" style="background: #ffbb00;"></span>
+					<span class="FF6103" id="default" style="background: #FF6103;"></span>
+					<span class="FF7722" style="background: #FF7722;"></span>
+					<span class="FF7256" style="background: #FF7256;"></span>
+					<span class="993300" style="background: #993300;"></span>
+					<span class="5E2605" style="background: #5E2605;"></span>
+					<span class="FF9955" style="background: #FF9955;"></span>
+					<span class="0070cc" style="background: #0070cc;"></span>
+					<span class="9300b5" style="background: #9300b5;"></span>
+					<span class="197700" style="background: #197700;"></span>
+					<span class="990000" style="background: #990000;"></span>
+					<span class="00459b" style="background: #00459b;"></span>
+					<span class="e07300" style="background: #e07300;"></span>
+					<span class="279e66" style="background: #279e66;"></span>
+					<span class="EE7AE9" style="background: #EE7AE9;"></span>
+					<span class="6072a5" style="background: #6072a5;"></span>
+				</div>
+
+				<div class="warning_teller"><span class="arrow"></span><span class="text">Activities and Groups must contain no more than 50 alphanumeric characters and spaces Although they must not start or end with a space.</span></div>
+
+				<ul class="activity_stuff">
+					<div></div>
+				</ul>
+			</div>
+		</div><!-- end .sector.activities -->
+	</div><!-- end .secondary_container -->
+{% endblock main %}
+
+{% block extra %}
+	<div class="load_data">processing</div>
+	<div class="cus_alert">
+		<div class="delete_activity alert_inner">
+			<span class="alert_text"></span>
+			<div class="alert_controlls">
+				<a href="#" class="no_left">No</a>
+				<a href="#" class="yes_right">Yes</a>
+			</div>
+		</div><!-- end .alert_inner for confirm delete activity and group -->
+		
+		<div class="delete_group alert_inner">
+			<span class="alert_text"></span>
+			<div class="alert_controlls">
+				<a href="#" class="no_left">No</a>
+				<a href="#" class="yes_right">Yes</a>
+			</div>
+		</div><!-- end .alert_inner for confirm delete activity and group -->
+		
+		<div class="add_activity_ui alert_inner">
+			<ul>
+				<li>
+					<label>Activity name </label>
+					<input class="add_activity_name" type="text" placeholder="Activity name"/>
+					<span class="add_activity_name_error">*</span>
+				</li>
+				
+				<li>
+					<label for="activity_billable">Billable </label>
+					<input style="height: 14px; margin: 0;" class="activity_billable" type="checkbox"/>
+				</li>		
+
+				<li class="activity_hourly_rate">
+					<label>Activity houly rate </label>
+					<select class="hourly_rate_currency" style="display: inline; min-width: 30px; width: 40px !important;">
+						<option id="D">$</option>
+						<option id="E">€</option>
+						<option id="Y">¥</option>
+						<option id="P">£</option>
+					</select>
+					<input class="add_activity_hourly_rate" type="text" placeholder="Hourly rate" style="width: 107px;"/>
+					<span class="add_activity_hourly_rate_error">*</span>
+				</li>
+
+				<li>
+					<label>Activity Parent Group </label>
+					<select class="add_activity_groups">
+						<option>No Parent</option>
+					</select>
+				</li>
+				
+				<li>
+					<label>Activity color </label>
+					<div class="color_pannel_add_activity"></div>
+				</li>
+				
+				<li class="add_activity_color">
+					<div class="">
+						<span class="d64848" id="default" style="background: #d64848;"></span>
+						<span class="8B1A1A" style="background: #8B1A1A;"></span>
+						<span class="bc0000" style="background: #bc0000;"></span>
+						<span class="8B3A3A" style="background: #8B3A3A;"></span>
+						<span class="FFADB9" style="background: #FFADB9;"></span>
+						<span class="EE799F" style="background: #EE799F;"></span>
+						<span class="CC3299" style="background: #CC3299;"></span>
+						<span class="DA70D6" style="background: #DA70D6;"></span>
+						<span class="990099" style="background: #990099;"></span>
+						<span class="9B30FF" style="background: #9B30FF;"></span>
+						<span class="CC00FF" style="background: #CC00FF;"></span>
+						<span class="4169E1" style="background: #4169E1;"></span>
+						<span class="499DF5" style="background: #499DF5;"></span>
+						<span class="82CFFD" style="background: #82CFFD;"></span>
+						<span class="50A6C2" style="background: #50A6C2;"></span>
+						<span class="008B45" style="background: #008B45;"></span>
+						<span class="55AE3A" style="background: #55AE3A;"></span>
+						<span class="556B2F" style="background: #556B2F;"></span>
+						<span class="3CB371" style="background: #3CB371;"></span>
+						<span class="FCDC3B" style="background: #FCDC3B;"></span>
+						<span class="ffbb00" style="background: #ffbb00;"></span>
+						<span class="FF6103" style="background: #FF6103;"></span>
+						<span class="FF7722" style="background: #FF7722;"></span>
+						<span class="FF7256" style="background: #FF7256;"></span>
+						<span class="993300" style="background: #993300;"></span>
+						<span class="5E2605" style="background: #5E2605;"></span>
+						<span class="FF9955" style="background: #FF9955;"></span>
+						<span class="0070cc" style="background: #0070cc;"></span>
+						<span class="9300b5" style="background: #9300b5;"></span>
+						<span class="197700" style="background: #197700;"></span>
+						<span class="990000" style="background: #990000;"></span>
+						<span class="00459b" style="background: #00459b;"></span>
+						<span class="e07300" style="background: #e07300;"></span>
+						<span class="279e66" style="background: #279e66;"></span>
+						<span class="EE7AE9" style="background: #EE7AE9;"></span>
+						<span class="6072a5" style="background: #6072a5;"></span>
+					</div>
+				</li>
+				
+				<div class="alert_controlls">
+					<a href="#" class="no_left">Cancel</a>
+					<a href="#" class="create_right">Create</a>
+				</div>
+			</ul>
+		</div><!-- end .alert_inner for add activity -->
+
+		<div class="add_group_ui alert_inner">
+			<ul>
+				<li>							
+					<label>Group name </label>
+					<input class="add_group_name" type="text" placeholder="Group name"/>
+					<span class="add_group_error">*</span>
+				</li>
+				
+				<li>
+					<label>Group Parent </label>
+					<select class="add_group_groups">
+						<option>No Parent</option>
+					</select>
+				</li>
+				
+				<div class="alert_controlls">
+					<a href="#" class="no_left">Cancel</a>
+					<a href="#" class="create_group_right">Create</a>
+				</div>
+			</ul>
+		</div>
+	</div><!-- end .cus_alert -->
+{% endblock extra %}

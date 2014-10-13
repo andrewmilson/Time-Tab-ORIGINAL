@@ -1,0 +1,342 @@
+.descrip_container{
+	margin: -1px 0 -5px -5px;
+	height: 210px;
+	padding: 40px 40px 40px 40px;
+	background: #eee;
+	border-bottom: 1px solid #ccc;
+	width: 850px;
+}
+
+.random_thing{
+	height: 1px;
+	background: transparent;
+}
+
+.descrip_container .descrip{
+	line-height: 22px;
+	float: right;
+	width: 400px;
+	font-size: 14px;
+}
+
+.descrip_container img{
+	float: left;
+	padding: 10px;
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.descrip_container .descrip .home_action{
+	margin: 10px 0 0 0;
+}
+
+.descrip_container .descrip .home_action span, .descrip_container .descrip .home_action a{
+	display: block;
+	font-weight: bold;
+	font-size: 12px;
+	text-decoration: none;
+	height: 30px;
+	padding: 0 8px 0 8px;
+	line-height: 30px;
+	float: left;
+}
+.descrip_container .descrip .home_action a{
+	display: block;
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	height: 40px;
+	padding: 0 30px 0 12px;
+	line-height: 40px;
+	background: url("../images/icons/signup.gif") no-repeat 120px 14px, #3D629E;
+	border: 1px solid #2c4f89;
+	float: left;
+	-webkit-transition: background-position 0.05s linear;
+	-moz-transition: background-position 0.05s linear;
+	-ms-transition: background-position 0.05s linear;
+	-o-transition: background-position 0.05s linear;
+}
+
+.descrip_container .descrip .home_action a:hover{
+	background-position: 128px 14px;
+}
+
+.descrip_container .descrip h1{
+	font-family: Oswald;
+	font-weight: 300;
+	font-size: 30px;
+	line-height: 35px;
+	margin: 0 0 15px 0;
+	padding: 0 0 15px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.descrip_container .descrip h1 span{
+	font-family: inherit;
+	font-weight: 700;
+}
+
+.descrip_container .descrip p{
+	margin: 0;
+	padding: 0;
+}
+
+
+.descrip_container iframe{
+	float: left;
+}
+
+header .call_to_action{
+	position: absolute;
+	right: 0;
+	top: 22px;
+}
+
+header .call_to_action a{
+	display: block;
+	height: 35px;
+	float: right;
+	line-height: 35px;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+	margin: 2px 0 0 10px;
+	border-radius: 3px;
+	padding: 0 15px 0 15px;
+	background: #4983af;
+	border: 1px solid #316c96;
+	box-shadow: 
+		inset 0 1px 0 rgba(255, 255, 255, 0.3),
+		0 5px 0 #316c96;
+	color: #eee;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	-webkit-transition: 0.05s linear;
+	-webkit-transition-property: box-shadow, background, margin;
+	-moz-transition: 0.05s linear;
+	-moz-transition-property: box-shadow, background, margin;
+	-o-transition: 0.05s linear;
+	-o-transition-property: box-shadow, background, margin;
+	-ms-transition: 0.05s linear;
+	-ms-transition-property: box-shadow, background, margin;
+}
+
+header .call_to_action a.login{
+	background: #999;
+	border: 1px solid #666;
+	box-shadow: 
+		inset 0 1px 0 rgba(255, 255, 255, 0.3),
+		0 5px 0 #666;
+}
+
+header .call_to_action a.loggedin{
+	background: #189148;
+	border: 1px solid #137f3c;
+	box-shadow: 
+		inset 0 1px 0 rgba(255, 255, 255, 0.3),
+		0 5px 0 #137f3c;
+}
+
+header .call_to_action a:hover{
+	background: #5491bc;
+	color: #fff;
+}
+
+header .call_to_action a.login:hover{
+	background: #aaa;
+}
+
+header .call_to_action a:active{
+	box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.3),
+		0 0px 0 #316c96;
+	margin-top: 7px;
+}
+
+table.plans td{
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+table.plans tr{
+	border-left: 1px solid #ccc;
+}
+
+table.plans{
+	margin: 15px 0 0 10px;
+	width: 900px;
+	font-size: 12px;
+	font-weight: bold;
+	border-collapse: collapse;
+	background: #eee;
+	color: #333;
+}
+
+table.plans tr:nth-child(2n + 2){
+	background: #ddd;
+}
+
+table.plans tr:nth-child(2n + 2) > td:nth-child(2n){
+	background-color: #e3e3e3;
+}
+
+table.plans td.yes{
+	background: url("/static/images/icons/tick.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+table.plans td.text{
+	text-align: center;
+}
+
+table.plans td.no{
+	background: url("/static/images/icons/cross_two.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+table.plans tr.top{
+	border-radius: 10px;
+	height: 60px;
+	background: #3D629E;
+	color: #fff;
+	text-align: center;
+	font-family: Oswald;
+	border-left-color: #31548c;
+	border-top: 1px solid #31548c;
+	border-right: 1px solid #31548c;
+	font-size: 30px;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+table.plans tr.top td{
+	border: none;
+}
+
+table.plans tr.top td.plan span{
+	font-size: 12px;
+	display: block;
+	text-shadow: none;
+}
+
+table.plans tr.top td.plan{
+	width: 150px;
+}
+
+a.signup_button{
+	display: block;
+	background: #F9E593;
+	color: #000;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	border: 1px solid #e5c649;
+	margin: 10px 0 0 10px;
+	width: 898px;
+	color: #333;
+	text-decoration: none;
+}
+
+a.signup_button:hover{
+	color: #000;
+	text-decoration: underline;
+}
+
+.signup_questions{
+	list-style: none;
+	width: 900px;
+	padding: 0;
+	margin: 50px 0 0 10px;
+}
+
+.signup_questions li{
+	float: left;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	width: 50%;
+	color: #333;
+	font-size: 12px;
+	margin: 0 0 20px 0;
+}
+
+.signup_questions li.clear{
+	clear: both;
+	display: block;
+	float: none;
+	border: none;
+}
+
+.signup_questions li h2{
+	font-size: 18px;
+	padding: 0 10px 0 10px;
+	margin: 0;
+}
+
+.signup_questions li p{
+	padding: 10px;
+	margin: 0;
+}
+
+ul.tour_list{
+	list-style: none;
+	padding: 5px;
+	margin: 40px 0 0 0;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	line-height: 20px;
+	width: 910px;
+	height: 450px;
+	font-size: 14px;
+}
+
+.tour_list li{
+	float: left;
+	padding: 10px 30px 10px 30px;
+	width: 390px;
+	text-align: justify;
+}
+
+.tour_list li strong{
+	display: block;
+	font-size: 20px;
+	font-family: Oswald;
+}
+
+.tour_list img{
+	margin: 0 0 10px 0;
+	padding: 10px;
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.extra_container{
+	background: #fff;
+	padding: 5px;
+	position: relative;
+	height: 130px;
+	margin: 0;
+}
+
+.text{
+	padding: 0 20px 20px 20px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.text h1, .text h2, .text h3, .text h4, .text h5, .text h6{
+	font-family: Oswald;
+	padding: 0;
+	margin: 25px 0 15px 0;
+}
+
+.text ul{
+	list-style: square;
+	margin: 0;
+}
+
+.text p{
+	padding: 0;
+	margin: 15px 0 5px 0;
+}
