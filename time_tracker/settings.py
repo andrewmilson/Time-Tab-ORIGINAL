@@ -45,9 +45,6 @@ SOCIAL_AUTH_ENABLED_BACKENDS = ("google")
 # HOSTNAME = 'http://localhost:8080'
 # PAYPAL_API_URL = 'https://api-3t.sandbox.paypal.com/nvp'
 # SALE_DESCRIPTION = 'Your payment to Foobar Inc.'
-# PAYPAL_LOGIN_URL = (
-#    'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token='
-#)
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
